@@ -1,0 +1,61 @@
+{
+  "src_folders": [
+    "tests"
+  ],
+  "output_folder": "reports",
+  "custom_commands_path": "",
+  "custom_assertions_path": "",
+  "page_objects_path": "",
+  "globals_path": "",
+  "selenium": {
+    "start_process": true,
+    "server_path": "./bin/webdriver/selenium-server-standalone-3.4.0.jar",
+    "log_path": "",
+    "port": 4444,
+    "cli_args": {
+      "webdriver.chrome.driver": "./bin/webdriver/chromedriver.exe",
+      "webdriver.gecko.driver": "./bin/webdriver/geckodriver.exe",
+      "webdriver.ie.driver": "./bin/webdriver/IEDriverServer.exe"
+    }
+  },
+  "test_workers": {
+    "enabled": true,
+    "workers": "auto"
+  },
+  "test_settings": {
+    "default": {
+      "launch_url": "http://localhost",
+      "selenium_port": 4444,
+      "selenium_host": "localhost",
+      "silent": true,
+      "screenshots": {
+        "enabled": false,
+        "path": ""
+      },
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "marionette": true
+      }
+    },
+    "chrome": {
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "--start-maximized"
+          ]
+        },
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    },
+    "ie": {
+      "desiredCapabilities": {
+        "browserName": "internet explorer",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "trustAllSSLCerficates": true
+      }
+    }
+  }
+}
